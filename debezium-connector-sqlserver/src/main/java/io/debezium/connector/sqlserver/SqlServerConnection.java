@@ -208,7 +208,7 @@ public class SqlServerConnection extends JdbcConnection {
     private static String createUrlPattern(JdbcConfiguration config, boolean useSingleDatabase) {
         String pattern = URL_PATTERN;
         if (config.getInstance() != null && !config.getInstance().isEmpty()) {
-            pattern += ";instanceName=${" + JdbcConfiguration.INSTANCE + "};";
+            pattern += ";instanceName=${" + JdbcConfiguration.INSTANCE + "}";
         }
         else {
             pattern += ":${" + JdbcConfiguration.PORT + "}";
